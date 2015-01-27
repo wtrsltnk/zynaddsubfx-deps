@@ -3,14 +3,14 @@ zynaddsubfx-deps
 
 Dependancy files for compiling ZynAddSubFx on windows
 
-32 bit dependancies are build with Visual Studio 2012(Express)
+32 bit dependancies are build with Visual Studio 2012(Express). All are Release builds
 
 Portaudio:
   - http://www.portaudio.com/download.html
   - extract tar.gz
   - create portaudio-build folder next to portaudio folder
   - open cmd in portaudio-build
-  - cmake -G "Visual Studio 11" ..\portaudio -DPA_WDMKS_NO_KSGUID_LIB
+  - cmake -G "Visual Studio 11" ..\portaudio -DPA_WDMKS_NO_KSGUID_LIB=ON
   - open portaudio.sln with visual studio 2012
   - select the Release build
   - in VS2012, open the file portaudio\os\win\pa_win_wdmks_utils.c
@@ -53,3 +53,18 @@ MXML:
   - copy all mxml-2.4\mxml.h files to include folder
   - copy all mxml-2.4\vcnet\*.lib files to lib folder
   - copy all mxml-2.4\vcnet\*.dll files to bin folder
+
+FLTK:
+  - http://www.fltk.org/software.php
+  - download the source package for the latest version
+  - extract the package which creates fltk-1.3.3
+  - create build folder next to it: fltk-1.3.3-build
+  - open commandline window into fltk-1.3.3-build
+  - run: cmake -G "Visual Studio 11"
+  - open the created FLTK.sln
+  - select the Release build
+  - build everything
+  - copy all fltk-1.3.3\FL\*.h files to include\FL folder
+  - copy all fltk-1.3.3-build\lib\Release\*.lib files to lib folder
+  - copy all fltk-1.3.3-build\bin\Release\*.dll files to bin folder
+  - copy all fltk-1.3.3-build\bin\Release\*.exe files to bin folder
