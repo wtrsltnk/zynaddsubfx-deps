@@ -60,7 +60,7 @@ FLTK:
   - extract the package which creates fltk-1.3.3
   - create build folder next to it: fltk-1.3.3-build
   - open commandline window into fltk-1.3.3-build
-  - run: cmake -G "Visual Studio 11"
+  - run: cmake -G "Visual Studio 11" ..\fltk-1.3.3
   - open the created FLTK.sln
   - select the Release build
   - build everything
