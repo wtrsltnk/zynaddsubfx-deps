@@ -68,3 +68,13 @@ FLTK:
   - copy all fltk-1.3.3-build\lib\Release\*.lib files to lib folder
   - copy all fltk-1.3.3-build\bin\Release\*.dll files to bin folder
   - copy all fltk-1.3.3-build\bin\Release\*.exe files to bin folder
+
+ZLIB:
+  - http://sourceforge.net/projects/gnuwin32/files/zlib/1.1.4/
+  - download zlib-1.1.4-bin.zip
+  - extract the package which creates zlib-1.1.4-bin
+  - open visual studio command line in this folder
+  - run LIB on the .def file:
+      lib /machine:x86 /def:zlib.def
+  - copy all .lib files to lib folder
+  - copy zlib.dll files to bin folder
