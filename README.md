@@ -88,7 +88,19 @@ ZLIB:
 GLM:
 
 - [github.com/g-truc/glm/releases](https://github.com/g-truc/glm/releases/)
-- donwloaded latest release (0.9.9.3 at this moment)
+- download latest release (0.9.9.3 at this moment)
+- extract zip file and open a ``cmd`` inside this folder
+- create build folder with ``mkdir build`` and go into that ``cd build``
+- make sure the correct compiler is added to your path. If not do it temporary by running the  following command :
+  ``set "PATH=C:\path\to\your\compiler\;%PATH%"``
+- for mingw-32 run cmake: ``cmake -G "MinGW Makefiles" .. -DCMAKE_INSTALL_PREFIX:PATH=C:\path\to\subfolder\of\this\repo``
+- run cmake to compile: ``cmake --build . --target all``
+- run cmake to install: ``cmake --build . --target install``
+
+GLFW:
+
+- [github.com/glfw/glfw/releases](https://github.com/glfw/glfw/releases/)
+- download latest release (3.2.1 at this moment)
 - extract zip file and open a ``cmd`` inside this folder
 - create build folder with ``mkdir build`` and go into that ``cd build``
 - make sure the correct compiler is added to your path. If not do it temporary by running the  following command :
