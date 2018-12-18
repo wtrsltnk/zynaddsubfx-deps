@@ -6,75 +6,93 @@ Dependancy files for compiling ZynAddSubFx on windows
 32 bit dependancies are build with Visual Studio 2012(Express). All are Release builds
 
 Portaudio:
-  - http://www.portaudio.com/download.html
-  - extract tar.gz
-  - create portaudio-build folder next to portaudio folder
-  - open cmd in portaudio-build
-  - cmake -G "Visual Studio 11" ..\portaudio -DPA_WDMKS_NO_KSGUID_LIB=ON
-  - open portaudio.sln with visual studio 2012
-  - select the Release build
-  - in VS2012, open the file portaudio\os\win\pa_win_wdmks_utils.c
-  - comment out the following line: #pragma comment( lib, "ksguid.lib" )
-  - and save the file
-  - build portaudio
-  - copy all portaudio\include\*.h files to include folder
-  - copy all portaudio-build\Release\*.lib files to lib folder
-  - copy all portaudio-build\Release\*.dll files to bin folder
+
+- [portaudio.com/download](http://www.portaudio.com/download.html)
+- extract tar.gz
+- create portaudio-build folder next to portaudio folder
+- open cmd in portaudio-build
+- cmake -G "Visual Studio 11" ..\portaudio -DPA_WDMKS_NO_KSGUID_LIB=ON
+- open portaudio.sln with visual studio 2012
+- select the Release build
+- in VS2012, open the file portaudio\os\win\pa_win_wdmks_utils.c
+- comment out the following line: #pragma comment( lib, "ksguid.lib" )
+- and save the file
+- build portaudio
+- copy all portaudio\include\*.h files to include folder
+- copy all portaudio-build\Release\*.lib files to lib folder
+- copy all portaudio-build\Release\*.dll files to bin folder
 
 pthread:
-  - http://cs.du.edu/~mitchell/pthreads_compiled.zip
-  - extract the zip to pthreads_compiled
-  - copy all pthreads_compiled\include\*.h files to include folder
-  - copy all pthreads_compiled\*.lib files to lib folder
-  - copy all pthreads_compiled\*.dll files to bin folder
+
+- [cs.du.edu/~mitchell/pthreads_compiled.zip](http://cs.du.edu/~mitchell/pthreads_compiled.zip)
+- extract the zip to pthreads_compiled
+- copy all pthreads_compiled\include\*.h files to include folder
+- copy all pthreads_compiled\*.lib files to lib folder
+- copy all pthreads_compiled\*.dll files to bin folder
 
 FFTW:
-  - http://www.fftw.org/install/windows.html
-  - download 32-bit version (fftw-3.3.4-dll32.zip)
-  - extract to fftw folder
-  - open visual studio command line in this folder
-  - run LIB on the .def files:
-      lib /machine:x86 /def:libfftw3-3.def
-      lib /machine:x86 /def:libfftw3f-3.def
-      lib /machine:x86 /def:libfftw3l-3.def
-  - copy all .h files to include folder
-  - copy all .lib files to lib folder
-  - copy all .dll files to bin folder
-  - copy all .exe files to bin folder
-  
+
+- [fftw.org/install/windows](http://www.fftw.org/install/windows.html)
+- download 32-bit version (fftw-3.3.4-dll32.zip)
+- extract to fftw folder
+- open visual studio command line in this folder
+- run LIB on the .def files:
+    lib /machine:x86 /def:libfftw3-3.def
+    lib /machine:x86 /def:libfftw3f-3.def
+    lib /machine:x86 /def:libfftw3l-3.def
+- copy all .h files to include folder
+- copy all .lib files to lib folder
+- copy all .dll files to bin folder
+- copy all .exe files to bin folder
+
 MXML:
-  - http://www.msweet.org/downloads.php?L+Z3
-  - download version 2.4 sources
-  - extract the archive which creates folder mxml-2.4
-  - open the solution file in the mxml-2.4\vcnet folder
-  - agree to update solution and project files
-  - select the Release build
-  - build mxml1 project
-  - copy all mxml-2.4\mxml.h files to include folder
-  - copy all mxml-2.4\vcnet\*.lib files to lib folder
-  - copy all mxml-2.4\vcnet\*.dll files to bin folder
+
+- [msweet.org/downloads](http://www.msweet.org/downloads.php?L+Z3)
+- download version 2.4 sources
+- extract the archive which creates folder mxml-2.4
+- open the solution file in the mxml-2.4\vcnet folder
+- agree to update solution and project files
+- select the Release build
+- build mxml1 project
+- copy all mxml-2.4\mxml.h files to include folder
+- copy all mxml-2.4\vcnet\*.lib files to lib folder
+- copy all mxml-2.4\vcnet\*.dll files to bin folder
 
 FLTK:
-  - http://www.fltk.org/software.php
-  - download the source package for the latest version
-  - extract the package which creates fltk-1.3.3
-  - create build folder next to it: fltk-1.3.3-build
-  - open commandline window into fltk-1.3.3-build
-  - run: cmake -G "Visual Studio 11" ..\fltk-1.3.3
-  - open the created FLTK.sln
-  - select the Release build
-  - build everything
-  - copy all fltk-1.3.3\FL\*.h files to include\FL folder
-  - copy all fltk-1.3.3-build\lib\Release\*.lib files to lib folder
-  - copy all fltk-1.3.3-build\bin\Release\*.dll files to bin folder
-  - copy all fltk-1.3.3-build\bin\Release\*.exe files to bin folder
+
+- [fltk.org/software](http://www.fltk.org/software.php)
+- download the source package for the latest version
+- extract the package which creates fltk-1.3.3
+- create build folder next to it: fltk-1.3.3-build
+- open commandline window into fltk-1.3.3-build
+- run: cmake -G "Visual Studio 11" ..\fltk-1.3.3
+- open the created FLTK.sln
+- select the Release build
+- build everything
+- copy all fltk-1.3.3\FL\*.h files to include\FL folder
+- copy all fltk-1.3.3-build\lib\Release\*.lib files to lib folder
+- copy all fltk-1.3.3-build\bin\Release\*.dll files to bin folder
+- copy all fltk-1.3.3-build\bin\Release\*.exe files to bin folder
 
 ZLIB:
-  - http://sourceforge.net/projects/gnuwin32/files/zlib/1.1.4/
-  - download zlib-1.1.4-bin.zip
-  - extract the package which creates zlib-1.1.4-bin
-  - open visual studio command line in this folder
-  - run LIB on the .def file:
-      lib /machine:x86 /def:zlib.def
-  - copy all .lib files to lib folder
-  - copy zlib.dll files to bin folder
+
+- [sourceforge.net/projects/gnuwin32/files/zlib/1.1.4](http://sourceforge.net/projects/gnuwin32/files/zlib/1.1.4/)
+- download zlib-1.1.4-bin.zip
+- extract the package which creates zlib-1.1.4-bin
+- open visual studio command line in this folder
+- run LIB on the .def file:
+    lib /machine:x86 /def:zlib.def
+- copy all .lib files to lib folder
+- copy zlib.dll files to bin folder
+
+GLM:
+
+- [github.com/g-truc/glm/releases](https://github.com/g-truc/glm/releases/)
+- donwloaded latest release (0.9.9.3 at this moment)
+- extract zip file and open a ``cmd`` inside this folder
+- create build folder with ``mkdir build`` and go into that ``cd build``
+- make sure the correct compiler is added to your path. If not do it temporary by running the  following command :
+  ``set "PATH=C:\path\to\your\compiler\;%PATH%"``
+- for mingw-32 run cmake: ``cmake -G "MinGW Makefiles" .. -DCMAKE_INSTALL_PREFIX:PATH=C:\path\to\subfolder\of\this\repo``
+- run cmake to compile: ``cmake --build . --target all``
+- run cmake to install: ``cmake --build . --target install``

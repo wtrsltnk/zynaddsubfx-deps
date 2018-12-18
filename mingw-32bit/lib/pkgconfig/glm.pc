@@ -1,0 +1,7 @@
+prefix=D:/Misc/Code/synth/zynaddsubfx-deps/mingw-32bit
+includedir=${prefix}/include
+
+Name: GLM
+Description: OpenGL Mathematics
+Version: 0.9.9
+Cflags: -I${includedir}
