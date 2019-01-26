@@ -37,6 +37,7 @@ FIND_LIBRARY(FFTW_LIBRARY
 				fftw.lib
 				fftwd.lib
 				libfftw3-3.lib
+				libfftw3-3.a
 		PATHS
 				lib
 				/usr/lib
