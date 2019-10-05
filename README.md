@@ -65,14 +65,10 @@ FLTK:
 - extract the package which creates fltk-1.3.3
 - create build folder next to it: fltk-1.3.3-build
 - open commandline window into fltk-1.3.3-build
-- run: cmake -G "Visual Studio 11" ..\fltk-1.3.3
-- open the created FLTK.sln
-- select the Release build
-- build everything
-- copy all fltk-1.3.3\FL\*.h files to include\FL folder
-- copy all fltk-1.3.3-build\lib\Release\*.lib files to lib folder
-- copy all fltk-1.3.3-build\bin\Release\*.dll files to bin folder
-- copy all fltk-1.3.3-build\bin\Release\*.exe files to bin folder
+- generate the cmake build files: ``cmake ..\``
+- use the option  ``-G "Visual Studio 11"`` when compiling for windows and ``-G "MinGW Makefiles"`` when compiling for MinGW
+- build with: ``cmake --build . --target all``
+- install with: ``cmake --install . --prefix C:\Code\synthdev\zynaddsubfx-deps\mingw-64bit``
 
 ZLIB:
 
