@@ -3,6 +3,12 @@ zynaddsubfx-deps
 
 Dependancy files for compiling ZynAddSubFx on windows
 
+32bit Visual Studio 2019
+
+GLFW
+
+- cmake -G "Visual Studio 16 2019" -A Win32 <c:\path\to\glfw\source> -DCMAKE_INSTALL_PREFIX=C:\Code\synthdev\zynaddsubfx-deps\vs2019-32bit
+
 32 bit dependancies are build with Visual Studio 2012(Express). All are Release builds
 
 Portaudio:
